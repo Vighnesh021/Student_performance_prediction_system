@@ -1,0 +1,39 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+
+<div class="navbar">
+  <h2>🎓 Student System</h2>
+  <div>
+    <a href="/dashboard">Dashboard</a>
+    <a href="/predict">Predict</a>
+    <a href="/logout">Logout</a>
+  </div>
+</div>
+
+<h2 style="text-align: center; margin-top: 20px">📜 Prediction History</h2>
+
+<div style="text-align: center; margin: 10px">
+  <a href="/download">⬇ Download</a> |
+  <a href="/clear">🗑 Clear</a>
+</div>
+
+<table>
+  <tr>
+    <th>Study</th>
+    <th>Attendance</th>
+    <th>Marks</th>
+    <th>Assignments</th>
+    <th>Internal</th>
+    <th>Result</th>
+  </tr>
+
+  {% for row in data %}
+  <tr>
+    <td>{{ row.Study }}</td>
+    <td>{{ row.Attendance }}</td>
+    <td>{{ row.Marks }}</td>
+    <td>{{ row.Assignments }}</td>
+    <td>{{ row.Internal }}</td>
+    <td>{{ row.Result }}</td>
+  </tr>
+  {% endfor %}
+</table>

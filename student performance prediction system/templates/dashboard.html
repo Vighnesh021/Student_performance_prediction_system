@@ -1,0 +1,33 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+
+<div class="navbar">
+  <h2>🎓 Student System</h2>
+  <div>
+    <a href="/dashboard">Dashboard</a>
+    <a href="/predict">Predict</a>
+    <a href="/history">History</a>
+    <a href="/logout">Logout</a>
+  </div>
+</div>
+
+<div class="dashboard">
+  <h2>👋 Dashboard</h2>
+
+  <div class="stats">
+    <div class="box">Total: {{ total }}</div>
+    <div class="box">Passed: {{ passed }}</div>
+    <div class="box">Failed: {{ failed }}</div>
+  </div>
+
+  <div class="actions">
+    <div class="box">
+      <h3>Predict</h3>
+      <a href="/predict">Go</a>
+    </div>
+
+    <div class="box">
+      <h3>History</h3>
+      <a href="/history">View</a>
+    </div>
+  </div>
+</div>

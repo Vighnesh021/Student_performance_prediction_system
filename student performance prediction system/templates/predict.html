@@ -1,0 +1,30 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+
+<div class="navbar">
+  <h2>🎓 Student System</h2>
+  <div>
+    <a href="/dashboard">Dashboard</a>
+    <a href="/history">History</a>
+    <a href="/logout">Logout</a>
+  </div>
+</div>
+
+<div class="center-box">
+  <div class="card">
+    <h2>📊 Prediction</h2>
+
+    <form method="post">
+      <input name="study" placeholder="Study Hours" />
+      <input name="attendance" placeholder="Attendance" />
+      <input name="marks" placeholder="Marks" />
+      <input name="assignments" placeholder="Assignments" />
+      <input name="internal" placeholder="Internal" />
+
+      <button>Predict</button>
+    </form>
+
+    {% if result %}
+    <h3>{{ result }}</h3>
+    {% endif %}
+  </div>
+</div>
