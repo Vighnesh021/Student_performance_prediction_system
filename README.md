@@ -1,1 +1,1 @@
-# Student_performance_prediction_system
+The **Student Approval Prediction System** is a machine learning-based web application developed using Python and Flask. It predicts whether a student application will be approved based on factors such as academic performance, attendance, and other student details. The system helps automate the decision-making process using data analysis and predictive modeling techniques. It provides a simple and user-friendly interface for entering student data and viewing prediction results efficiently.
